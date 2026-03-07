@@ -48,27 +48,15 @@
       font-size: 14px;
       font-weight: 700;
     }
-    h1 {
-      margin: 16px 0 12px;
-      font-size: clamp(34px, 6vw, 64px);
-      line-height: 1.05;
-      letter-spacing: -0.04em;
-    }
+    h1 { margin: 16px 0 12px; font-size: clamp(34px, 6vw, 64px); line-height: 1.05; letter-spacing: -0.04em; }
     .sub { color: var(--muted); max-width: 760px; font-size: 17px; }
     .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 24px; }
     .card { padding: 22px; }
-    .card h2 { margin: 0 0 8px; font-size: 24px; }
+    .card h2 { margin: 10px 0 8px; font-size: 24px; }
     .muted { color: var(--muted); }
     .meta { margin-top: 14px; color: var(--muted); font-size: 14px; }
-    .btn {
-      display: inline-flex;
-      margin-top: 18px;
-      padding: 11px 15px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--brand), var(--brand2));
-      color: white;
-      font-weight: 700;
-    }
+    .btn { display: inline-flex; margin-top: 18px; padding: 11px 15px; border-radius: 999px; background: linear-gradient(135deg, var(--brand), var(--brand2)); color: white; font-weight: 700; }
+    .badge { display:inline-block; padding:6px 10px; border-radius:999px; background: rgba(138,180,255,.12); color: var(--brand); font-size: 12px; font-weight: 700; }
     @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
   </style>
 </head>
@@ -79,20 +67,15 @@
       <h1>Showcase Pages</h1>
       <p class="sub">用于承载从私有工作仓库精炼后发布出来的公开展示页面。适合旅行计划、方案页、汇报页、提案页等后续持续扩展。</p>
     </section>
-
     <section class="grid">
+      
       <a class="card" href="./trips/hk-macau-apr-2026/">
-        <h2>香港 & 澳门情侣出游计划</h2>
+        <div class="badge">Trips</div>
+        <h2>Hong Kong &amp; Macau Couple Trip · Apr 2026</h2>
         <p class="muted">4天3晚，澳门一日、港迪一日、拍照、买包、咖啡、港餐的精致执行版页面。</p>
-        <div class="meta">分类：Trips · 2026-04</div>
+        <div class="meta">路径：/trips/hk-macau-apr-2026/ · 更新：2026-03-07</div>
         <span class="btn">打开页面</span>
       </a>
-
-      <div class="card">
-        <h2>更多展示位</h2>
-        <p class="muted">后续可以继续加入更多公开展示内容，例如：旅行攻略、周报、提案、项目概览页。</p>
-        <div class="meta">建议目录：/trips · /reports · /plans · /showcase</div>
-      </div>
     </section>
   </div>
 </body>
