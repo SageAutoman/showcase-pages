@@ -16,6 +16,7 @@
       --brand: #b76542;
       --brand-2: #e8a06b;
       --brand-3: #7d5fff;
+      --green: #2d8a6b;
       --shadow: 0 24px 70px rgba(115,79,62,.12);
       --radius: 26px;
       --max: 1180px;
@@ -35,218 +36,84 @@
     a { color: var(--brand); text-decoration: none; }
     img { max-width: 100%; display: block; border-radius: 20px; }
     .wrap { max-width: var(--max); margin: 0 auto; padding: 24px 20px 90px; }
-    .topbar {
-      position: sticky;
-      top: 12px;
-      z-index: 20;
-      margin-bottom: 18px;
-    }
+    .topbar { position: sticky; top: 12px; z-index: 20; margin-bottom: 18px; }
     .nav {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px 14px;
-      border: 1px solid rgba(255,255,255,.7);
-      background: rgba(255,255,255,.72);
-      backdrop-filter: blur(14px);
-      border-radius: 18px;
-      box-shadow: var(--shadow);
+      display: flex; gap: 10px; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      padding: 12px 14px; border: 1px solid rgba(255,255,255,.7); background: rgba(255,255,255,.72);
+      backdrop-filter: blur(14px); border-radius: 18px; box-shadow: var(--shadow);
     }
-    .nav-links {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
+    .nav-links { display: flex; gap: 10px; flex-wrap: wrap; }
+    .nav-links a, .ghost-btn {
+      display: inline-flex; align-items: center; justify-content: center; padding: 10px 14px; border-radius: 999px;
+      font-size: 14px; font-weight: 700; border: 1px solid rgba(183,101,66,.12); background: rgba(255,255,255,.7); color: var(--text);
     }
-    .nav-links a, .ghost-btn, .solid-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: 700;
-      border: 1px solid rgba(183,101,66,.12);
-    }
-    .ghost-btn { background: rgba(255,255,255,.7); color: var(--text); }
-    .solid-btn {
-      background: linear-gradient(135deg, var(--brand), #d98359);
-      color: white;
-      border: none;
-      box-shadow: 0 16px 40px rgba(183,101,66,.22);
-    }
-    .hero {
-      display: grid;
-      grid-template-columns: 1.08fr .92fr;
-      gap: 20px;
-      align-items: stretch;
-    }
+    .hero { display: grid; grid-template-columns: 1.08fr .92fr; gap: 20px; align-items: stretch; }
     .hero-card, .card {
-      border-radius: 30px;
-      background: var(--paper);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(10px);
+      border-radius: 30px; background: var(--paper); border: 1px solid var(--line); box-shadow: var(--shadow); backdrop-filter: blur(10px);
     }
     .hero-main {
-      padding: 38px 32px;
-      background: linear-gradient(135deg, rgba(255,255,255,.84), rgba(255,245,238,.92));
-      position: relative;
-      overflow: hidden;
+      padding: 38px 32px; background: linear-gradient(135deg, rgba(255,255,255,.84), rgba(255,245,238,.92));
+      position: relative; overflow: hidden;
     }
     .hero-main:after {
-      content: "";
-      position: absolute;
-      right: -40px;
-      top: -20px;
-      width: 220px;
-      height: 220px;
-      background: radial-gradient(circle, rgba(232,160,107,.35), rgba(232,160,107,0));
-      border-radius: 50%;
-      pointer-events: none;
+      content: ""; position: absolute; right: -40px; top: -20px; width: 220px; height: 220px;
+      background: radial-gradient(circle, rgba(232,160,107,.35), rgba(232,160,107,0)); border-radius: 50%; pointer-events: none;
     }
     .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(183,101,66,.08);
-      color: var(--brand);
-      font-size: 14px;
-      font-weight: 800;
-      letter-spacing: .02em;
+      display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px;
+      background: rgba(183,101,66,.08); color: var(--brand); font-size: 14px; font-weight: 800; letter-spacing: .02em;
     }
-    h1 {
-      margin: 18px 0 14px;
-      font-size: clamp(34px, 6vw, 64px);
-      line-height: 1.02;
-      letter-spacing: -0.04em;
+    h1 { margin: 18px 0 14px; font-size: clamp(34px, 6vw, 64px); line-height: 1.02; letter-spacing: -0.04em; }
+    .sub { max-width: 720px; color: var(--muted); font-size: 17px; }
+    .hero-points, .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 22px; }
+    .mini, .stat {
+      padding: 14px 16px; border-radius: 18px; background: rgba(255,255,255,.76); border: 1px solid var(--line);
     }
-    .sub {
-      max-width: 720px;
-      color: var(--muted);
-      font-size: 17px;
-    }
-    .hero-points {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-top: 22px;
-    }
-    .mini {
-      padding: 14px 16px;
-      border-radius: 18px;
-      background: rgba(255,255,255,.76);
-      border: 1px solid var(--line);
-    }
-    .mini .k { color: var(--muted); font-size: 13px; }
-    .mini .v { margin-top: 8px; font-weight: 800; }
-    .hero-side {
-      padding: 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
+    .mini .k, .stat .k { color: var(--muted); font-size: 13px; }
+    .mini .v, .stat .v { margin-top: 8px; font-weight: 800; }
+    .hero-side { padding: 14px; display: flex; flex-direction: column; gap: 14px; }
     .hero-side img { height: 100%; object-fit: cover; }
-    .section {
-      margin-top: 24px;
-      padding: 26px;
-    }
+    .section { margin-top: 24px; padding: 26px; }
     .section-title {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 16px;
+      display: flex; justify-content: space-between; align-items: end; gap: 14px; flex-wrap: wrap; margin-bottom: 16px;
     }
-    h2 {
-      margin: 0;
-      font-size: 28px;
-      letter-spacing: -0.03em;
-    }
+    h2 { margin: 0; font-size: 28px; letter-spacing: -0.03em; }
+    h3 { margin: 0 0 8px; font-size: 17px; }
     .muted { color: var(--muted); }
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 12px;
-    }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
     .pill {
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(183,101,66,.12);
-      background: rgba(232,160,107,.12);
-      font-size: 14px;
-      font-weight: 700;
-      color: #7b4a34;
+      padding: 8px 12px; border-radius: 999px; border: 1px solid rgba(183,101,66,.12); background: rgba(232,160,107,.12);
+      font-size: 14px; font-weight: 700; color: #7b4a34;
     }
     .grid-2 { display: grid; grid-template-columns: 1.15fr .85fr; gap: 18px; }
     .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
     .timeline { display: grid; gap: 16px; }
     .day {
-      padding: 20px;
-      border-radius: 22px;
-      border: 1px solid var(--line);
+      padding: 20px; border-radius: 22px; border: 1px solid var(--line);
       background: linear-gradient(180deg, rgba(255,255,255,.74), rgba(255,250,246,.84));
     }
-    .day-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 12px;
-    }
+    .day-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
     .day-head strong { font-size: 20px; }
     .tag {
-      display: inline-flex;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: rgba(125,95,255,.10);
-      color: #5d46c0;
-      font-size: 12px;
-      font-weight: 800;
+      display: inline-flex; padding: 6px 10px; border-radius: 999px; background: rgba(125,95,255,.10);
+      color: #5d46c0; font-size: 12px; font-weight: 800;
     }
-    .slot {
-      margin-top: 12px;
-      padding: 14px 16px;
-      border-radius: 18px;
-      background: rgba(255,255,255,.72);
-      border: 1px solid rgba(92,63,52,.08);
+    .tag.green { background: rgba(45,138,107,.10); color: var(--green); }
+    .slot, .hotel, .food, .tip, .route-box, .weather-box {
+      margin-top: 12px; padding: 16px 18px; border-radius: 20px; border: 1px solid var(--line); background: rgba(255,255,255,.72);
     }
-    .slot h3 { margin: 0 0 8px; font-size: 17px; }
+    .slot:first-child, .hotel:first-child, .food:first-child, .tip:first-child { margin-top: 0; }
     .list { margin: 0; padding-left: 18px; }
     .list li + li { margin-top: 6px; }
-    .hotel, .food, .tip {
-      padding: 16px 18px;
-      border-radius: 20px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.72);
-    }
-    .hotel strong, .food strong { font-size: 17px; }
-    .image-card {
-      overflow: hidden;
-      border-radius: 24px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.72);
-    }
+    .image-card { overflow: hidden; border-radius: 24px; border: 1px solid var(--line); background: rgba(255,255,255,.72); }
     .image-card img { width: 100%; }
-    .image-card .cap {
-      padding: 14px 16px 18px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .footer {
-      margin-top: 30px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 14px;
-    }
+    .image-card .cap { padding: 14px 16px 18px; color: var(--muted); font-size: 14px; }
+    .budget { border-left: 4px solid var(--brand); }
+    .route-title { display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; margin-bottom:10px; }
+    .footer { margin-top: 30px; text-align: center; color: var(--muted); font-size: 14px; }
     @media (max-width: 980px) {
-      .hero, .grid-2, .grid-3, .hero-points { grid-template-columns: 1fr; }
+      .hero, .grid-2, .grid-3, .grid-4, .hero-points, .stats { grid-template-columns: 1fr; }
       .nav { align-items: flex-start; }
     }
   </style>
@@ -257,10 +124,12 @@
       <div class="nav">
         <div class="nav-links">
           <a href="#overview">总览</a>
+          <a href="#budget">预算</a>
           <a href="#itinerary">行程</a>
           <a href="#hotels">酒店</a>
           <a href="#food">餐饮</a>
           <a href="#shopping">购物</a>
+          <a href="#weather">晴雨方案</a>
           <a href="#tips">执行建议</a>
         </div>
         <div class="nav-links">
@@ -271,11 +140,11 @@
 
     <section class="hero" id="overview">
       <div class="hero-card hero-main">
-        <div class="eyebrow">✨ 港澳情侣旅行 · 精修展示版</div>
+        <div class="eyebrow">✨ 港澳情侣旅行 · 第二轮打磨版</div>
         <h1>香港 & 澳门<br>4天3晚情侣出游计划</h1>
         <p class="sub">
-          这版不再只是“能走的行程”，而是以 <strong>情侣体验、舒适度、出片率、购物效率</strong> 为优先级重新打磨后的最终方案。
-          目标是：白天不狼狈、晚上有氛围、重点体验完整、最后还能从容返程。
+          这版进一步从“可执行”往“真正好用”推进：除了主行程，还补了 <strong>预算框架、晴雨替代、路线嵌入式餐饮建议、节奏说明</strong>。
+          目标不是把时间塞满，而是让你们每一天都走得顺、拍得好、买得准、吃得舒服。
         </p>
         <div class="hero-points">
           <div class="mini"><div class="k">日期</div><div class="v">2026/04/17 → 2026/04/20</div></div>
@@ -321,6 +190,27 @@
       </div>
     </section>
 
+    <section class="card section" id="budget">
+      <div class="section-title">
+        <h2>预算框架</h2>
+        <div class="muted">先把预算边界想清楚，后面订酒店和吃饭会轻松很多。</div>
+      </div>
+      <div class="grid-4">
+        <div class="stat budget"><div class="k">酒店（双人/3晚）</div><div class="v">约 3600–13000+ RMB</div></div>
+        <div class="stat budget"><div class="k">吃喝（日常）</div><div class="v">约 600–1800 RMB</div></div>
+        <div class="stat budget"><div class="k">澳门交通 + 吃</div><div class="v">约 500–1200 RMB</div></div>
+        <div class="stat budget"><div class="k">港迪</div><div class="v">门票 + 园内餐饮另算</div></div>
+      </div>
+      <div class="route-box" style="margin-top:16px;">
+        <div class="route-title"><strong>预算怎么分配更合理</strong><span class="tag green">建议</span></div>
+        <ul class="list">
+          <li>如果你们更看重整体体验，优先把预算加在 <strong>酒店位置 + 港迪完整体验 + 一两顿高质量餐</strong> 上。</li>
+          <li>如果“买包”是这次的重要目标，不要反过来压酒店太低到住得很折腾，不然体力和情绪成本会更高。</li>
+          <li>香港餐饮完全可以做到“早餐轻、午餐实用、晚餐挑一顿氛围好的”，不需要每顿都上强度。</li>
+        </ul>
+      </div>
+    </section>
+
     <section class="card section" id="itinerary">
       <div class="section-title">
         <h2>详细行程</h2>
@@ -355,26 +245,26 @@
           <div class="slot">
             <h3>上午｜澳门半岛经典线</h3>
             <ul class="list">
-              <li>大三巴牌坊</li>
-              <li>恋爱巷</li>
-              <li>议事亭前地</li>
-              <li>玫瑰堂</li>
-              <li>大炮台（有体力再加）</li>
+              <li>大三巴牌坊：城市符号，早点到更容易拍到干净画面</li>
+              <li>恋爱巷：真正适合情侣合照的点，色彩和街道弧度都很讨喜</li>
+              <li>议事亭前地：澳门最完整的城市广场感</li>
+              <li>玫瑰堂：黄白外立面上镜，顺路且不费体力</li>
+              <li>大炮台（有体力再加）：加一个俯瞰视角即可，不必硬上</li>
             </ul>
           </div>
           <div class="slot">
             <h3>中午｜澳门代表性吃法</h3>
             <ul class="list">
-              <li>葡国菜正餐</li>
-              <li>或猪扒包 + 葡挞 + 饮品的轻组合</li>
+              <li>如果想要仪式感：选葡国菜正餐</li>
+              <li>如果想节奏更轻：猪扒包 + 葡挞 + 饮品</li>
             </ul>
           </div>
           <div class="slot">
             <h3>下午｜氹仔 / 路氹轻量延伸</h3>
             <ul class="list">
-              <li>官也街</li>
-              <li>龙环葡韵</li>
-              <li>视体力加巴黎人外景</li>
+              <li>官也街：作为补小吃和手信的一站最合适</li>
+              <li>龙环葡韵：比单纯逛综合体更适合拍情侣照</li>
+              <li>巴黎人外景：如果状态还在线，可以补一组华丽感照片</li>
             </ul>
             <p class="muted">澳门最忌讳贪多。历史城区 + 官也街 / 龙环葡韵就已经足够饱满。</p>
           </div>
@@ -386,18 +276,18 @@
           <div class="slot">
             <h3>上午｜先拍再玩</h3>
             <ul class="list">
-              <li>美国小镇大街</li>
-              <li>奇妙梦想城堡</li>
-              <li>花坛、气球、小店门头</li>
+              <li>美国小镇大街：早上的状态最好，妆发也完整</li>
+              <li>奇妙梦想城堡：这天最重要的主视觉照片尽量上午拍掉</li>
+              <li>花坛、气球、小店门头：别小看这些，情侣照的氛围往往靠它们撑起来</li>
             </ul>
           </div>
           <div class="slot">
             <h3>白天｜项目推荐</h3>
             <ul class="list">
-              <li>迷离大宅</li>
-              <li>森林河流之旅</li>
-              <li>小小世界</li>
-              <li>灰熊山极速矿车</li>
+              <li>迷离大宅：香港迪士尼最有辨识度的项目之一</li>
+              <li>森林河流之旅：轻松、氛围感强</li>
+              <li>小小世界：适合中间放松和补体力</li>
+              <li>灰熊山极速矿车：给这天留一点刺激感</li>
             </ul>
           </div>
           <div class="slot">
@@ -412,10 +302,10 @@
           <div class="slot">
             <h3>上午｜上环 / 中环漫游</h3>
             <ul class="list">
-              <li>上环街区</li>
-              <li>石板街（砵典乍街）</li>
-              <li>嘉咸街一带</li>
-              <li>PMQ 元创方</li>
+              <li>上环街区：老香港和新店混在一起，最适合松弛感城市照</li>
+              <li>石板街（砵典乍街）：经典但不必停留太久，拍一组就够</li>
+              <li>嘉咸街一带：更生活化，不会太游客视角</li>
+              <li>PMQ 元创方：适合收尾式逛逛，空间也舒服</li>
             </ul>
             <p class="muted">这里最适合把你想要的咖啡、三明治、面包和城市感照片一并完成。</p>
           </div>
@@ -426,9 +316,9 @@
           <div class="slot">
             <h3>下午｜尖沙咀买包</h3>
             <ul class="list">
-              <li>海港城</li>
-              <li>广东道</li>
-              <li>K11 Musea</li>
+              <li>海港城：密度最高，先冲</li>
+              <li>广东道：旗舰店思路更清晰</li>
+              <li>K11 Musea：作为补充和顺便拍照的点</li>
             </ul>
             <p class="muted">买包放最后是最聪明的：时间可控，买完就收尾，不会拎着战利品折返奔波。</p>
           </div>
@@ -446,11 +336,11 @@
           <strong>The Mira Hong Kong</strong>
           <p class="muted">尖沙咀地段强，设计感在线，情侣住体验很好，是“整体质感”最均衡的一档。</p>
         </div>
-        <div class="hotel" style="margin-top:12px;">
+        <div class="hotel">
           <strong>Hyatt Regency Tsim Sha Tsui</strong>
           <p class="muted">如果你想要一个稳定、不容易踩雷、出行效率高的选择，它很合适。</p>
         </div>
-        <div class="hotel" style="margin-top:12px;">
+        <div class="hotel">
           <strong>Page148 / Eaton HK</strong>
           <p class="muted">中等预算里最适合情侣短住的两类思路：一个更简洁、一个更生活方式。</p>
         </div>
@@ -504,6 +394,21 @@
           </ul>
         </div>
       </div>
+
+      <div class="grid-3" style="margin-top:16px;">
+        <div class="route-box">
+          <div class="route-title"><strong>Day 1 宵夜建议</strong><span class="tag">就近解决</span></div>
+          <p class="muted">第一晚不要再跑太远。酒店附近找一间看起来干净、营业正常的茶餐厅/粥粉面店，比为了某家名店折返更聪明。</p>
+        </div>
+        <div class="route-box">
+          <div class="route-title"><strong>Day 2 澳门吃法</strong><span class="tag">路线嵌入</span></div>
+          <p class="muted">上午逛完半岛历史城区后补葡挞或猪扒包，中午再决定是否坐下来吃葡国菜。这样体力分配最好。</p>
+        </div>
+        <div class="route-box">
+          <div class="route-title"><strong>Day 4 香港吃法</strong><span class="tag">最值得用心</span></div>
+          <p class="muted">建议：上环/中环先咖啡+面包/三明治，午餐再补一顿港餐。这样既满足你要的“特色店”，也不会一上来吃得太重。</p>
+        </div>
+      </div>
     </section>
 
     <section class="grid-2" style="margin-top:24px;" id="shopping">
@@ -526,6 +431,31 @@
         <div class="image-card">
           <img src="./assets/macau-street.svg" alt="澳门葡式街景风格插画" />
           <div class="cap">澳门的美感，不在于跑很多地方，而在于历史城区和葡式街景本身的节奏。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card section" id="weather">
+      <div class="section-title">
+        <h2>晴天 / 下雨天替代方案</h2>
+        <div class="muted">四月港澳天气有变数，提前想好替代路线很值。</div>
+      </div>
+      <div class="grid-2">
+        <div class="weather-box">
+          <div class="route-title"><strong>晴天版</strong><span class="tag green">推荐</span></div>
+          <ul class="list">
+            <li>澳门优先走半岛历史城区 + 龙环葡韵，尽量把街景照片拍满</li>
+            <li>香港 Day 4 坚持上环/中环步行线，照片质感会比室内高很多</li>
+            <li>港迪尽量待到晚上，完整吃到天色变化的氛围红利</li>
+          </ul>
+        </div>
+        <div class="weather-box">
+          <div class="route-title"><strong>下雨版</strong><span class="tag">备用</span></div>
+          <ul class="list">
+            <li>澳门：压缩户外停留，大三巴拍到即可，更多时间转向威尼斯人 / 巴黎人 / 室内咖啡馆</li>
+            <li>香港：减少长时间街拍，把 PMQ、K11 Musea、海港城、商场连廊利用起来</li>
+            <li>港迪：准备轻便雨具，保留核心拍照点，不执着刷过多开放式项目</li>
+          </ul>
         </div>
       </div>
     </section>

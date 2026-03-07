@@ -1,0 +1,37 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#DDF0FF"/>
+      <stop offset="100%" stop-color="#FFF7F2"/>
+    </linearGradient>
+    <linearGradient id="castle" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F8D8C4"/>
+      <stop offset="100%" stop-color="#E9B79C"/>
+    </linearGradient>
+    <linearGradient id="roof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8D6CCF"/>
+      <stop offset="100%" stop-color="#5F4A9D"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1350" cy="150" r="85" fill="#FFF1A8"/>
+  <rect x="0" y="700" width="1600" height="200" fill="#D7F0D8"/>
+  <rect x="560" y="370" width="480" height="290" rx="18" fill="url(#castle)"/>
+  <rect x="700" y="250" width="200" height="410" rx="18" fill="#F2C9B2"/>
+  <rect x="480" y="430" width="92" height="230" rx="12" fill="#F1C4AA"/>
+  <rect x="1028" y="430" width="92" height="230" rx="12" fill="#F1C4AA"/>
+  <path d="M664 250L800 90L936 250H664Z" fill="url(#roof)"/>
+  <path d="M460 430L526 300L592 430H460Z" fill="url(#roof)"/>
+  <path d="M1008 430L1074 300L1140 430H1008Z" fill="url(#roof)"/>
+  <path d="M548 370L600 270L652 370H548Z" fill="#7A60BD"/>
+  <path d="M948 370L1000 270L1052 370H948Z" fill="#7A60BD"/>
+  <path d="M776 660C776 614 812 578 856 578C900 578 936 614 936 660H776Z" fill="#9C6A5E"/>
+  <rect x="620" y="470" width="54" height="90" rx="8" fill="#FFF4DE"/>
+  <rect x="926" y="470" width="54" height="90" rx="8" fill="#FFF4DE"/>
+  <rect x="750" y="400" width="42" height="74" rx="8" fill="#FFF4DE"/>
+  <rect x="808" y="400" width="42" height="74" rx="8" fill="#FFF4DE"/>
+  <rect x="666" y="520" width="44" height="82" rx="8" fill="#FFF4DE"/>
+  <rect x="892" y="520" width="44" height="82" rx="8" fill="#FFF4DE"/>
+  <path d="M804 90L820 48L836 90H804Z" fill="#F0B36D"/>
+  <rect x="817" y="40" width="6" height="36" fill="#F0B36D"/>
+</svg>
