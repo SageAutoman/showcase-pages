@@ -87,9 +87,7 @@
       box-shadow: var(--shadow);
       backdrop-filter: blur(8px);
     }
-    .mini-card {
-      padding: 16px;
-    }
+    .mini-card { padding: 16px; }
     .mini-card .k { color: var(--muted); font-size: 13px; }
     .mini-card .v { margin-top: 8px; font-weight: 700; }
     .grid {
@@ -104,14 +102,8 @@
       font-size: 24px;
       letter-spacing: -.02em;
     }
-    h3 {
-      margin: 22px 0 10px;
-      font-size: 18px;
-    }
-    .timeline {
-      display: grid;
-      gap: 14px;
-    }
+    h3 { margin: 22px 0 10px; font-size: 18px; }
+    .timeline { display: grid; gap: 14px; }
     .day {
       padding: 18px;
       border: 1px solid var(--line);
@@ -138,17 +130,8 @@
     }
     ul { margin: 10px 0 0 18px; padding: 0; }
     li + li { margin-top: 6px; }
-    .cols-2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-    }
-    .pill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 12px;
-    }
+    .cols-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .pill-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
     .pill {
       padding: 9px 12px;
       background: rgba(240,178,122,.16);
@@ -163,6 +146,28 @@
       background: rgba(255,255,255,.7);
     }
     .muted { color: var(--muted); }
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid rgba(184,92,56,.18);
+      background: rgba(255,255,255,.72);
+      box-shadow: var(--shadow);
+    }
+    .btn.primary {
+      background: linear-gradient(135deg, #b85c38, #d98557);
+      color: white;
+      border: none;
+    }
     .footer {
       margin-top: 26px;
       color: var(--muted);
@@ -188,6 +193,10 @@
         <div class="mini-card"><div class="k">结构</div><div class="v">澳门 1 天 + 港迪 1 天</div></div>
         <div class="mini-card"><div class="k">住宿</div><div class="v">尖沙咀 / 佐敦 3 晚</div></div>
         <div class="mini-card"><div class="k">风格</div><div class="v">情侣舒适 + 高出片率</div></div>
+      </div>
+      <div class="cta-row">
+        <a class="btn primary" href="https://github.com/SageAutoman/hk-macau-couple-trip-apr-2026" target="_blank" rel="noreferrer">查看私有原稿仓库</a>
+        <a class="btn" href="https://github.com/SageAutoman/showcase-pages" target="_blank" rel="noreferrer">查看展示站仓库</a>
       </div>
     </section>
 
@@ -309,7 +318,7 @@
         <li>港迪尽量留到晚一点，更值回票价。</li>
         <li>所有店铺最终以当天营业时间、排队情况和位置便利性为准。</li>
       </ul>
-      <p class="muted">完整 markdown 原稿已同步至仓库，当前页面为可直接访问的精美版展示页。</p>
+      <p class="muted">完整 markdown 原稿保存在私有仓库，当前页面为公开展示版。</p>
     </section>
 
     <div class="footer">
