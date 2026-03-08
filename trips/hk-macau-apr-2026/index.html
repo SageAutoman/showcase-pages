@@ -109,11 +109,12 @@
     .image-card { overflow: hidden; border-radius: 24px; border: 1px solid var(--line); background: rgba(255,255,255,.72); }
     .image-card img { width: 100%; }
     .image-card .cap { padding: 14px 16px 18px; color: var(--muted); font-size: 14px; }
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
     .budget { border-left: 4px solid var(--brand); }
     .route-title { display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; margin-bottom:10px; }
     .footer { margin-top: 30px; text-align: center; color: var(--muted); font-size: 14px; }
     @media (max-width: 980px) {
-      .hero, .grid-2, .grid-3, .grid-4, .hero-points, .stats { grid-template-columns: 1fr; }
+      .hero, .grid-2, .grid-3, .grid-4, .hero-points, .stats, .photo-grid { grid-template-columns: 1fr; }
       .nav { align-items: flex-start; }
     }
   </style>
@@ -172,7 +173,7 @@
       <div class="hero-card hero-side">
         <div class="image-card">
           <img src="https://images.unsplash.com/photo-1536599424071-0b215a388ba7?auto=format&fit=crop&w=1400&q=80" alt="香港维港夜景实拍" referrerpolicy="no-referrer" />
-          <div class="cap">Day 1 配图应当直接对应维港夜景：尖沙咀海滨长廊、星光大道、K11 Musea 外侧这类第一晚就能拍到的实景氛围。</div>
+          <div class="cap">Day 1 配图应当直接对应维港夜景：尖沙咀海滨长廊、星光大道、K11 Musea 外侧这类第一晚就能拍到的实景氛围。封面如果不用港迪城堡，优先就用这类夜景图。</div>
         </div>
       </div>
     </section>
@@ -412,6 +413,41 @@
         <div class="tip">
           <strong>港迪城堡 / 美国小镇大街</strong>
           <p class="muted">城堡负责拿主视觉，美国小镇负责补故事感。前者拍“这趟来了”，后者拍“这趟玩得很开心”。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card section">
+      <div class="section-title">
+        <h2>分段配图建议</h2>
+        <div class="muted">别再用“香港一张、澳门一张、港迪一张”糊过去了。</div>
+      </div>
+      <div class="photo-grid">
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=1200&q=80" alt="尖沙咀维港夜景参考图" referrerpolicy="no-referrer" />
+          <div class="cap"><strong>尖沙咀夜景</strong><br>适合放在 Day 1 或封面备选，承担“到港第一晚氛围建立”的作用。</div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1517672651691-24622a91b550?auto=format&fit=crop&w=1200&q=80" alt="澳门葡式街景参考图" referrerpolicy="no-referrer" />
+          <div class="cap"><strong>澳门老城 / 恋爱巷气质图</strong><br>重点不是地标本身，而是色彩、街道纵深和情侣状态感。</div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1618944913480-4cf89354b79d?auto=format&fit=crop&w=1200&q=80" alt="港迪城堡参考图" referrerpolicy="no-referrer" />
+          <div class="cap"><strong>港迪城堡</strong><br>这张图负责“仪式感”和主视觉，适合做整篇攻略里最明确的亮点。</div>
+        </div>
+      </div>
+      <div class="photo-grid">
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1526481280695-3c4691a332f7?auto=format&fit=crop&w=1200&q=80" alt="香港上环街区参考图" referrerpolicy="no-referrer" />
+          <div class="cap"><strong>上环 / 中环 citywalk</strong><br>建议配咖啡店门口、坡道街角、斑马线感的图，增强松弛感。</div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1200&q=80" alt="香港街拍氛围参考图" referrerpolicy="no-referrer" />
+          <div class="cap"><strong>石板街 / PMQ 补图位</strong><br>这类图适合做“空间感”和“细节感”补充，不是主视觉但能让页面完整很多。</div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?auto=format&fit=crop&w=1200&q=80" alt="海港城购物线参考图" referrerpolicy="no-referrer" />
+          <div class="cap"><strong>海港城 / 广东道购物线</strong><br>购物段也应该有图，但它更像过场图，不该抢走出片景点的视觉权重。</div>
         </div>
       </div>
     </section>
